@@ -2,7 +2,7 @@
 
 This is the Test project.
 
-Used:
+Uses:
 -React
 -Node.js
 -Express
