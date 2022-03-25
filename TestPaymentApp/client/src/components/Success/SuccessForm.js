@@ -1,14 +1,12 @@
-import {React, useEffect, useState} from 'react'
-import useStyles from "./styles"
-import * as api from '../api/index';
+import React from 'react';
+import useStyles from "./styles";
 import { Button, Grid, Typography, Paper, Container} from '@material-ui/core';
 
-const SuccessForm = ({setCurrWindow, currPayment, currWindow}) => {
+const SuccessForm = ({ setCurrWindow, currPayment }) => {
     const classes = useStyles();
-  
 
     const handleClick = (e) => {
-        setCurrWindow(true)
+        setCurrWindow(true);
     }
 
   return (
@@ -21,7 +19,6 @@ const SuccessForm = ({setCurrWindow, currPayment, currWindow}) => {
             <Typography variant="h5" className={classes.number}>
                 {currPayment[0].id}
             </Typography>
-
             </Grid> 
             <Grid className={classes.list}>
             <Typography variant="h5">
@@ -30,13 +27,10 @@ const SuccessForm = ({setCurrWindow, currPayment, currWindow}) => {
             <Typography variant="h5" className={classes.number}>
                 {currPayment[0].amount}
             </Typography>
-
             </Grid>
-
             <Button variant='contained' fullWidth color="primary" className={classes.submit} onClick={handleClick} >
                 Back To Form
             </Button>
-
         </Paper>
     </Container>
   )

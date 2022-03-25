@@ -1,24 +1,18 @@
-import { ReactChild, useState} from 'react'
-import useStyles from "./styles"
-
-
+import { React, useState} from 'react';
 import PaymentForm from './components/PaymentForm/PaymentForm';
 import SuccessForm from './components/Success/SuccessForm';
 
-
 const App = () => {
-    const classes = useStyles();
+
     const [currWindow, setCurrWindow] = useState(true);
     const [currPayment, setCurrPayment] = useState({});
     
     return (
         <div>
-            {currWindow ? (
-                
-                <PaymentForm  setCurrWindow={setCurrWindow} setCurrPayment={setCurrPayment}/>
+            {currWindow ? (  
+                <PaymentForm  setCurrWindow={setCurrWindow} setCurrPayment={setCurrPayment} />
             ) : (
-                
-                <SuccessForm  setCurrWindow={setCurrWindow} currPayment={currPayment} currWindow={currWindow}/>
+                <SuccessForm  setCurrWindow={setCurrWindow} currPayment={currPayment} />
             )}
         </div>
     )
